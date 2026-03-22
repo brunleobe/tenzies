@@ -3,7 +3,7 @@
 @theme {
   --font-karla: 'Karla', sans-serif;
   --font-inter: 'Inter', sans-serif;
-  --color-dark-bg: #0B2434;
+  --color-dark-bg: #F2F2F2; /* page background */
   --color-held-green: #59E391;
   --color-roll-purple: #5035FF;
 }

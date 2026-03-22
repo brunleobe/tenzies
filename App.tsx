@@ -62,17 +62,21 @@ export default function App() {
     ))
 
     return (
-        <main>
+        <main className="bg-white rounded-2xl shadow-[0_18px_30px_rgba(0,0,0,0.2)] w-full max-w-[420px] p-10 flex flex-col justify-evenly items-center">
             {gameWon && <Confetti />}
             <div aria-live="polite" className="sr-only">
                 {gameWon && <p>Congratulations! You won! Press "New Game" to start again.</p>}
             </div>
-            <h1 className="title">Tenzies</h1>
-            <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-            <div className="dice-container">
+            <h1 className="text-[40px] m-0 font-karla">Tenzies</h1>
+            <p className="font-inter font-normal mt-2 text-center text-slate-600">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            <div className="grid grid-rows-2 grid-cols-5 gap-5 my-10">
                 {diceElements}
             </div>
-            <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
+            <button
+                ref={buttonRef}
+                className="h-[50px] whitespace-nowrap w-auto px-[24px] py-[8px] border-none rounded-[12px] bg-roll-purple text-white text-[1.1rem] font-karla cursor-pointer shadow-[0_8px_20px_rgba(80,53,255,0.35)] transition hover:shadow-[0_12px_28px_rgba(80,53,255,0.35)] active:scale-[0.98]"
+                onClick={rollDice}
+            >
                 {gameWon ? "New Game" : "Roll"}
             </button>
         </main>

@@ -7,7 +7,7 @@ interface DieProps {
 export default function Die(props: DieProps) {
     return (
         <button
-            className={`h-[50px] w-[50px] shadow-sm rounded-[10px] border-none text-[1.75rem] font-bold font-karla cursor-pointer ${
+            className={`h-[50px] w-[50px] shadow-[0_4px_12px_rgba(0,0,0,0.1)] rounded-[12px] border-none text-[1.75rem] font-bold font-karla cursor-pointer transition-transform duration-150 hover:scale-[1.06] ${
                 props.isHeld ? "bg-held-green" : "bg-white"
             }`}
             onClick={props.hold}
